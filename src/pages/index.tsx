@@ -18,7 +18,7 @@ export default function Home() {
   const [showCoverLetter, setShowCoverLetter] = useState<boolean>(false);
   const [jobDescription, setJobDescription] = useState<string>("");
   const [resume, setResume] = useState<string>("");
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState<number>(114);
   // const [result, setResult] = useState<string>("");
   const [updatedResume, setUpdatedResume] = useState<string>("");
   const [coverLetter, setCoverLetter] = useState<string>("");
