@@ -4,7 +4,13 @@ import Image from "next/image";
 // local imports
 import bulletOne from "../../../public/images/1-black.png";
 
-const JobDescription = () => {
+type Props = {
+  jobDescription: string;
+  setJobDescription: (arg0: string) => void;
+};
+
+const JobDescription = (props: Props) => {
+  const { jobDescription, setJobDescription } = props;
   const spanStyle = {
     paddingBottom: "5px",
     color: "gray",
@@ -19,8 +25,11 @@ const JobDescription = () => {
         <span style={spanStyle}>(or write a few sentence about the job)</span>
       </Flex>
       <Textarea
+        value={jobDescription}
+        onChange={(e) => setJobDescription(e.target.value)}
         isRequired
         rows={6}
+        maxLength={1000}
         placeholder="e.g. looking for a Node/React Full Stack Engineer for a Long-Term Remote Contract opportunity.
 Must Haves:
 5+ years experience in Full Stack Software Development, programming, database development and infrastructure development

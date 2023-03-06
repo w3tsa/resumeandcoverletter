@@ -4,7 +4,13 @@ import Image from "next/image";
 // local imports
 import bulletTwo from "../../../public/images/2-black.png";
 
-const Resume = () => {
+type Props = {
+  resume: string;
+  setResume: (arg0: string) => void;
+};
+
+const Resume = (props: Props) => {
+  const { resume, setResume } = props;
   return (
     <>
       <Flex alignItems={"center"} background={"1px solid black"}>
@@ -14,6 +20,9 @@ const Resume = () => {
         </Text>
       </Flex>
       <Textarea
+        value={resume}
+        onChange={(e) => setResume(e.target.value)}
+        maxLength={1000}
         isRequired
         placeholder="e.g. Software Engineer with a Focus on Diversity and Inclusion: Creating Products that Empower Everyone."
       />

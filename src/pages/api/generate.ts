@@ -1,7 +1,7 @@
 import { openAIStream, OpenAIStreamPayload } from "../../../utils/OpenAIStream";
 
-if (!process.env.OPEN_AI_KEY) {
-  throw new Error("OPEN_AI_KEY is not set");
+if (!process.env.OPENAI_API_KEY) {
+  throw new Error("Missing env var from OpenAI");
 }
 
 export const config = {
@@ -9,9 +9,7 @@ export const config = {
 };
 
 const handler = async (req: Request): Promise<Response> => {
-  const { prompt } = (await req.json()) as {
-    prompt?: string;
-  };
+  const { prompt } = await req.json();
 
   if (!prompt) {
     // eslint-disable-next-line @typescript-eslint/no-throw-literal
