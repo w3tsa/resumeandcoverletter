@@ -7,7 +7,7 @@ import { BsGithub } from "react-icons/bs";
 const Hero = () => {
   return (
     <Box mt={5}>
-      <Link href="https://github.com/w3tsa/fluentparrot" isExternal>
+      <Link href="https://github.com/w3tsa/writemecoverletter" isExternal>
         <Button
           leftIcon={<BsGithub />}
           colorScheme="gray"

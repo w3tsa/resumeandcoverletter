@@ -5,6 +5,10 @@ import Head from "next/head";
 import { Container, Divider } from "@chakra-ui/react";
 import Header from "@/components/header";
 import Hero from "@/components/hero/Hero";
+import JobDescription from "@/components/job_description";
+import Resume from "@/components/resume/Resume";
+import GenerateButton from "@/components/GenerateButton";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -22,14 +26,14 @@ export default function Home() {
         <Header />
         <Divider orientation="horizontal" mt={5} />
         <Hero />
-        {/* <Container>
+        <Container>
           <JobDescription />
           <Resume />
           <GenerateButton />
-          <UpdatedResume />
+          {/* <UpdatedResume /> */}
         </Container>
         <Divider orientation="horizontal" mb={5} />
-        <Footer /> */}
+        <Footer />
       </Container>
     </div>
   );
