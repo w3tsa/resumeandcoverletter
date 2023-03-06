@@ -11,6 +11,7 @@ type Props = {
 
 const Result = (props: Props) => {
   const { text } = props;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [value, setValue] = useState("");
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
   const toast = useToast();
