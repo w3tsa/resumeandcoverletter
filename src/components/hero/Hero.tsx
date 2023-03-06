@@ -4,7 +4,12 @@ import { Box, Button, Heading, Link, Text } from "@chakra-ui/react";
 import styles from "@/styles/Hero.module.css";
 import { BsGithub } from "react-icons/bs";
 
-const Hero = () => {
+type Props = {
+  count: number;
+};
+
+const Hero = (props: Props) => {
+  const { count } = props;
   return (
     <Box mt={5}>
       <Link href="https://github.com/w3tsa/writemecoverletter" isExternal>
@@ -22,7 +27,9 @@ const Hero = () => {
         <span className={styles.boujee}>Resume/cover-letter</span> using chatGPT
       </Heading>
       <br />
-      <Text color={"gray"}>47,118 Resumes/Cover-letter generated so far.</Text>
+      <Text color={"gray"}>
+        {count.toLocaleString("en-us")} Resumes/Cover-letter generated so far.
+      </Text>
     </Box>
   );
 };

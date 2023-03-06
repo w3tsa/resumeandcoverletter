@@ -23,9 +23,9 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  /* .boujee {
+  .boujee {
     animation: move-bg 8s linear infinite;
-  } */
+  }
   @keyframes move-bg {
     to {
       background-position: var(--bg-size) 0;

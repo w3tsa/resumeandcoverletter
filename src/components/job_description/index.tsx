@@ -29,7 +29,7 @@ const JobDescription = (props: Props) => {
         onChange={(e) => setJobDescription(e.target.value)}
         isRequired
         rows={6}
-        maxLength={1000}
+        // maxLength={1000}
         placeholder="e.g. looking for a Node/React Full Stack Engineer for a Long-Term Remote Contract opportunity.
 Must Haves:
 5+ years experience in Full Stack Software Development, programming, database development and infrastructure development

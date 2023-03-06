@@ -3,10 +3,13 @@ import { Box, Button, useColorMode } from "@chakra-ui/react";
 
 type Props = {
   handleClick: any;
+  text: string;
+  ariaLabel: string;
+  loading: boolean;
 };
 
 const GenerateButton = (props: Props) => {
-  const { handleClick } = props;
+  const { handleClick, text, ariaLabel, loading } = props;
   const { colorMode } = useColorMode();
   return (
     <>
@@ -14,12 +17,15 @@ const GenerateButton = (props: Props) => {
         <Button
           background={colorMode === "light" ? "black" : "gray.700"}
           color={"white"}
-          width={"100%"}
+          // width={"100%"}
           borderRadius={10}
           _hover={{ opacity: "0.8" }}
           onClick={handleClick}
+          aria-label={ariaLabel}
+          isLoading={loading}
         >
-          Generate your Resume and Cover letter <ArrowForwardIcon />
+          {text}
+          <ArrowForwardIcon />
         </Button>
       </Box>
     </>

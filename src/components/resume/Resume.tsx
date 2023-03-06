@@ -22,7 +22,7 @@ const Resume = (props: Props) => {
       <Textarea
         value={resume}
         onChange={(e) => setResume(e.target.value)}
-        maxLength={1000}
+        // maxLength={1000}
         isRequired
         placeholder="e.g. Software Engineer with a Focus on Diversity and Inclusion: Creating Products that Empower Everyone."
       />
