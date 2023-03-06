@@ -18,7 +18,7 @@ const Header = () => {
           height={"50"}
         />
         <Text fontSize={"lg"} letterSpacing={1.2} fontWeight={"bold"}>
-          writemecoverletter.com
+          resumeandcoverletter.vercel.app
         </Text>
       </Flex>
       <Box>

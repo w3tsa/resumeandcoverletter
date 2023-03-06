@@ -98,13 +98,13 @@ export default function Home() {
   return (
     <div className="App">
       <Head>
-        <title>Create Next App</title>
+        <title>Resume and Cover letter</title>
         <meta
           name="description"
           content="Generate you resume and cover letter with AI"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/logo_light.png" />
       </Head>
       <Container as={"main"} maxW={"container.lg"}>
         <Header />
