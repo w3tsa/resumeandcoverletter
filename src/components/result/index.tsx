@@ -47,6 +47,7 @@ const Result = (props: Props) => {
         value={text}
         onChange={handleChange}
         pointerEvents={"none"}
+        overflow={"hidden"}
       ></Textarea>
     </Box>
   );
