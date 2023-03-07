@@ -1,4 +1,6 @@
-# Resume and Cover letter Generator with ChatGPT
+# [Resume and Cover letter Generator with ChatGPT](https://resumeandcoverletter.vercel.app/)
+
+[![Resume/Cover Letter Generator](./public/screenshot.png)](https://resumeandcoverletter.vercel.app/)
 
 Welcome to our revolutionary website, where we combine the power of artificial intelligence with human expertise to create personalized resumes for job seekers. Our state-of-the-art platform analyzes your current resume and compares it to the job description you provide, ensuring that your skills and experiences are tailored to meet the specific requirements of the position you are applying for.
 
