@@ -9,6 +9,12 @@ type Props = {
   setResume: (arg0: string) => void;
 };
 
+const spanStyle = {
+  paddingBottom: "5px",
+  color: "gray",
+  fontWeight: "normal",
+};
+
 const Resume = (props: Props) => {
   const { resume, setResume } = props;
   return (
@@ -16,7 +22,8 @@ const Resume = (props: Props) => {
       <Flex alignItems={"center"} background={"1px solid black"}>
         <Image src={bulletTwo} alt={"bullet number 1"} width={80} height={80} />
         <Text fontWeight={"bold"} pb={"5px"} ml={-3}>
-          Copy current resume
+          Copy current resume{" "}
+          <span style={spanStyle}>(or write the Job Title)</span>
         </Text>
       </Flex>
       <Textarea

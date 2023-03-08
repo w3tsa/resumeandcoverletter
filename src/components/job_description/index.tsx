@@ -14,6 +14,7 @@ const JobDescription = (props: Props) => {
   const spanStyle = {
     paddingBottom: "5px",
     color: "gray",
+    fontWeight: "normal",
   };
   return (
     <>
@@ -21,8 +22,8 @@ const JobDescription = (props: Props) => {
         <Image src={bulletOne} alt={"bullet number 1"} width={80} height={80} />
         <Text fontWeight={"bold"} pb={"5px"} ml={-3}>
           Copy the job description{" "}
+          <span style={spanStyle}>(or write a few sentence about the job)</span>
         </Text>
-        <span style={spanStyle}>(or write a few sentence about the job)</span>
       </Flex>
       <Textarea
         value={jobDescription}

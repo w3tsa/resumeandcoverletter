@@ -1,8 +1,9 @@
-import { Box, Button, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, Text, Link } from "@chakra-ui/react";
+import Balancer from "react-wrap-balancer";
 
 // styles
 import styles from "@/styles/Hero.module.css";
-import Link from "next/link";
+import NextLink from "next/link";
 import { BsGithub } from "react-icons/bs";
 // import { BsGithub } from "react-icons/bs";
 
@@ -14,7 +15,12 @@ const Hero = (props: Props) => {
   const { count } = props;
   return (
     <Box mt={5}>
-      <Link href="https://github.com/w3tsa/writemecoverletter" isExternal>
+      <Link
+        as={NextLink}
+        href="https://github.com/w3tsa/resumeandcoverletter"
+        isExternal
+        _hover={{ textDecoration: "none" }}
+      >
         <Button
           leftIcon={<BsGithub />}
           colorScheme="gray"
@@ -25,8 +31,10 @@ const Hero = (props: Props) => {
         </Button>
       </Link>
       <Heading as="h1" size="3xl" mt={5}>
-        Generate your next{" "}
-        <span className={styles.boujee}>Resume/cover-letter</span> using chatGPT
+        <Balancer ratio={0.65}>
+          Generate your next <span className={styles.boujee}>Resume </span> or{" "}
+          <span className={styles.boujee}>Cover letter</span> using chatGPT
+        </Balancer>
       </Heading>
       <br />
       <Text color={"gray"}>
