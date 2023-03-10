@@ -35,19 +35,19 @@ const MobileView = () => {
           <MenuList>
             <MenuItem>
               <Link
+                passHref
                 as={NextLink}
                 href="https://github.com/w3tsa/"
                 isExternal
                 _hover={{ textDecoration: "none" }}
               >
-                <Button
-                  leftIcon={<BsGithub />}
-                  colorScheme="gray"
-                  variant="outline"
-                  boxShadow={"md"}
+                <Flex
+                  alignItems={"center"}
+                  justifyContent={"space-between"}
+                  width={"70px"}
                 >
-                  check out my github
-                </Button>
+                  <BsGithub /> <Text>github</Text>
+                </Flex>
               </Link>
             </MenuItem>
           </MenuList>

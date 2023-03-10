@@ -6,6 +6,7 @@ import MobileView from "./MobilView";
 
 const Navigation = () => {
   const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
+
   return <>{isLargerThan700 ? <DesktopView /> : <MobileView />}</>;
 };
 
