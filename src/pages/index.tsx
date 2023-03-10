@@ -3,8 +3,15 @@ import Head from "next/head";
 
 // styles
 // import styles from "@/styles/Home.module.css";
-import { Button, Container, Divider, Flex, Progress } from "@chakra-ui/react";
-import Header from "@/components/header";
+import {
+  Button,
+  Container,
+  Divider,
+  Flex,
+  Progress,
+  useMediaQuery,
+} from "@chakra-ui/react";
+import Navigation from "@/components/header/Navigation";
 import Hero from "@/components/hero/Hero";
 import JobDescription from "@/components/job_description";
 import Resume from "@/components/resume/Resume";
@@ -25,6 +32,9 @@ export default function Home() {
 
   const updatedResumeRef = useRef<null | HTMLDivElement | any>(null);
   // const coverLetterRef = useRef<null | HTMLDivElement | any>(null);
+
+  // Media Queries
+  const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
 
   const scrollToResult = () => {
     if (updatedResumeRef.current !== null) {
@@ -107,7 +117,7 @@ export default function Home() {
         <link rel="icon" href="/images/logo_light.png" />
       </Head>
       <Container as={"main"} maxW={"container.lg"}>
-        <Header />
+        <Navigation />
         <Divider orientation="horizontal" mt={5} />
         <Hero count={count} />
         <Container>
@@ -120,7 +130,12 @@ export default function Home() {
           {loading ? (
             <Progress size="xs" isIndeterminate />
           ) : (
-            <Flex justifyContent={"space-between"} alignItems={"center"} mb={5}>
+            <Flex
+              justifyContent={"space-between"}
+              alignItems={"center"}
+              mb={5}
+              direction={isLargerThan700 ? undefined : "column"}
+            >
               <GenerateButton
                 handleClick={generate}
                 text="Generate your Resume"
