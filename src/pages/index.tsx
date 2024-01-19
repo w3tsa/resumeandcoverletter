@@ -31,7 +31,7 @@ export default function Home() {
   const [coverLetter, setCoverLetter] = useState<string>("");
 
   const updatedResumeRef = useRef<null | HTMLDivElement | any>(null);
-  // const coverLetterRef = useRef<null | HTMLDivElement | any>(null);
+  const coverLetterRef = useRef<null | HTMLDivElement | any>(null);
 
   // Media Queries
   const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
@@ -39,6 +39,9 @@ export default function Home() {
   const scrollToResult = () => {
     if (updatedResumeRef.current !== null) {
       updatedResumeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (coverLetterRef.current !== null) {
+      coverLetterRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -93,6 +96,7 @@ export default function Home() {
       }
     }
     scrollToResult();
+    console.log("scroll to Result____");
     setLoading(false);
   };
 
@@ -152,13 +156,17 @@ export default function Home() {
           )}
           {showResume && (
             <>
-              <Result text={updatedResume} />
+              <div ref={updatedResumeRef}>
+                <Result text={updatedResume} />
+              </div>
             </>
           )}
           <br />
           {showCoverLetter && (
             <>
-              <Result text={coverLetter} />
+              <div ref={coverLetterRef}>
+                <Result text={coverLetter} />
+              </div>
             </>
           )}
           {(showResume || showCoverLetter) && (
